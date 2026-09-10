@@ -47,6 +47,8 @@ ll calc2(int n) {
         base[i] = BCL::broadcast(base[i], i);
     }
 
+    bclx::barrier_sync();
+
     ll sum = 0;
     for (int i = 0; i < np; i++) {
         int ilo = n * i / np;
